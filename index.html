@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SR Motors - Premium Auto Service & Repair</title>
+    <title>SR Motors - Trusted Independent Garage in Letchworth</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/logotab.jpg" type="image/jpg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <!-- Navigation -->
     <header>
         <nav>
-            <div class="logo">SR MOTORS</div>
+            <img src="images/logocropped.jpg" alt="SR Motors Logo" class="logo">
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -23,102 +27,86 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Premium Auto Care</h1>
-            <p>Expert mechanical services with precision engineering and uncompromising quality</p>
-            <button class="cta-button">Book Service Now</button>
+            <h1>Reliable Repairs.<br>Honest Service.<br>All Makes & Models.</h1>
+            <p>From diagnostics to restorations, SR Motors delivers quality workmanship you can trust - for cars and
+                light commercials</p>
+            <a href="tel:01462675210" class="cta-button">Call SR motors</a>
         </div>
+    </section>
+
+    <!-- About SR Motors -->
+    <section class="about">
+        <h2 class="section-title">About SR Motors</h2>
+        <p>SR Motors is a trusted independent garage in Letchworth, providing professional repairs and servicing for all
+            vehicle brands. With expert diagnostics, transparent pricing, and years of experience, we keep your car
+            running smoothly and safely.</p>
     </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
         <h2 class="section-title">Our Services</h2>
+        <p class="services-tagline">From quick fixes to major repairs - we do it all properly.</p>
         <div class="services-grid">
             <div class="service-card">
                 <span class="service-icon">🔧</span>
-                <h3>Engine Diagnostics</h3>
-                <p>Advanced computer diagnostics to identify and resolve engine issues quickly and accurately.</p>
+                <h3>Servicing (All Makes & Light Commercials)</h3>
             </div>
             <div class="service-card">
-                <span class="service-icon">🛠️</span>
-                <h3>Full Maintenance</h3>
-                <p>Comprehensive vehicle maintenance including oil changes, filter replacements, and inspections.</p>
+                <span class="service-icon">🖥️</span>
+                <h3>Computer Diagnostics</h3>
             </div>
             <div class="service-card">
-                <span class="service-icon">⚙️</span>
-                <h3>Transmission Work</h3>
-                <p>Expert transmission repair and maintenance by certified technicians using OEM parts.</p>
+                <span class="service-icon">📋</span>
+                <h3>MOT Repairs</h3>
             </div>
             <div class="service-card">
-                <span class="service-icon">🔩</span>
-                <h3>Brake Service</h3>
-                <p>Complete brake system inspection, repair, and replacement with premium components.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">⚡</span>
-                <h3>Electrical Systems</h3>
-                <p>Diagnosis and repair of all electrical components including battery, alternator, and starters.</p>
+                <span class="service-icon">⏰</span>
+                <h3>Timing Belts & Timing Chains</h3>
             </div>
             <div class="service-card">
                 <span class="service-icon">🚗</span>
-                <h3>Custom Tuning</h3>
-                <p>Performance upgrades and custom tuning to enhance your vehicle's power and efficiency.</p>
+                <h3>Exhausts</h3>
             </div>
+            <div class="service-card">
+                <span class="service-icon">🔋</span>
+                <h3>Batteries</h3>
+            </div>
+            <div class="service-card hidden">
+                <span class="service-icon">⚙️</span>
+                <h3>Clutches</h3>
+            </div>
+            <div class="service-card hidden">
+                <span class="service-icon">❄️</span>
+                <h3>Air Conditioning</h3>
+            </div>
+            <div class="service-card hidden">
+                <span class="service-icon">🛞</span>
+                <h3>Suspensions</h3>
+            </div>
+            <div class="service-card hidden">
+                <span class="service-icon">🔥</span>
+                <h3>Alloy Welding</h3>
+            </div>
+            <div class="service-card hidden">
+                <span class="service-icon">🛠️</span>
+                <h3>Restorations</h3>
+            </div>
+        </div>
+        <div class="services-toggle">
+            <button id="toggle-services" class="cta-button-secondary">Show More Services</button>
         </div>
     </section>
 
     <!-- Why Choose Us -->
-    <section class="features" id="why-us">
+    <section class="why-choose" id="why-us">
         <h2 class="section-title">Why Choose SR Motors?</h2>
-        <div class="features-grid">
-            <div class="feature-item">
-                <div class="feature-number">25+</div>
-                <h3>Years Experience</h3>
-                <p>Two decades of excellence in automotive service and repair</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-number">5000+</div>
-                <h3>Vehicles Serviced</h3>
-                <p>Trusted by thousands of satisfied customers across the region</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-number">100%</div>
-                <h3>Warranty Coverage</h3>
-                <p>Complete warranty on all parts and labor for peace of mind</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-number">24/7</div>
-                <h3>Customer Support</h3>
-                <p>Always available when you need us most</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <h2 class="section-title">What Our Clients Say</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Exceptional service! The team at SR Motors really knows their stuff. My car
-                    runs better than ever."</p>
-                <div class="testimonial-author">John Thompson</div>
-                <div class="testimonial-role">Vehicle Owner</div>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Professional, reliable, and affordable. They've been maintaining my fleet
-                    for 3 years without issues."</p>
-                <div class="testimonial-author">Sarah Martinez</div>
-                <div class="testimonial-role">Fleet Manager</div>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Best mechanics in town! They take time to explain everything and never
-                    upsell. Highly recommended!"</p>
-                <div class="testimonial-author">Mike Anderson</div>
-                <div class="testimonial-role">Regular Customer</div>
-            </div>
-        </div>
+        <ul class="why-choose-list">
+            <li>Fully qualified, experienced technicians</li>
+            <li>Honest advice & clear pricing</li>
+            <li>Fast turnaround times</li>
+            <li>Comprehensive mechanical services under one roof</li>
+            <li>Local, trusted and customer-focused</li>
+        </ul>
     </section>
 
     <!-- CTA Section -->
@@ -132,7 +120,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>About SR Motors</h4>
+                <h4>Contact</h4>
                 <p>We're dedicated to providing exceptional automotive service with integrity and expertise.</p>
             </div>
             <div class="footer-section">
@@ -203,8 +191,24 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.service-card, .testimonial-card, .feature-item').forEach(el => {
+        document.querySelectorAll('.service-card, .testimonial-card').forEach(el => {
             observer.observe(el);
+        });
+
+        // Services toggle functionality
+        const toggleButton = document.getElementById('toggle-services');
+        const hiddenServices = document.querySelectorAll('.service-card.hidden');
+
+        toggleButton.addEventListener('click', function () {
+            hiddenServices.forEach(card => {
+                card.classList.toggle('hidden');
+            });
+
+            if (toggleButton.textContent === 'Show More Services') {
+                toggleButton.textContent = 'Show Less Services';
+            } else {
+                toggleButton.textContent = 'Show More Services';
+            }
         });
 
         // Button click handlers
