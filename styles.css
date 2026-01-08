@@ -9,6 +9,12 @@ body {
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
+    background: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 /* Header & Navigation */
@@ -42,7 +48,7 @@ nav {
 }
 
 .nav-links a {
-    color: #333;
+    color: #0D2A6C;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -50,7 +56,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #ff6b35;
+    color: #0D2A6C;
 }
 
 .nav-links a::after {
@@ -60,7 +66,7 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    background: #ff6b35;
+    background: #D42027;
     transition: width 0.3s ease;
 }
 
@@ -70,8 +76,6 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.75) 0%, rgba(45, 45, 45, 0.75) 50%, rgba(26, 26, 26, 0.75) 100%),
-        url('./images/spanners.jpg') center/cover no-repeat;
     color: #fff;
     padding: 120px 2rem;
     text-align: center;
@@ -83,6 +87,16 @@ nav {
     justify-content: center;
 }
 
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -90,9 +104,9 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(247, 147, 30, 0.1) 0%, transparent 50%);
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.75) 0%, rgba(45, 45, 45, 0.75) 50%, rgba(26, 26, 26, 0.75) 100%);
     pointer-events: none;
+    z-index: 0.5;
 }
 
 .hero-content {
@@ -122,22 +136,23 @@ nav {
 .cta-button {
     display: inline-block;
     padding: 15px 40px;
-    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    background: #D42027;
     color: #fff;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 8px;
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 10px 30px rgba(212, 32, 39, 0.3);
     animation: slideInUp 0.8s ease 0.4s both;
 }
 
 .cta-button:hover {
+    background: #0D2A6C;
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+    box-shadow: 0 15px 40px rgba(13, 42, 108, 0.5);
 }
 
 .cta-button:active {
@@ -173,7 +188,7 @@ nav {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #1a1a1a;
+    color: #0D2A6C;
     position: relative;
     padding-bottom: 1rem;
 }
@@ -186,7 +201,7 @@ nav {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    background: linear-gradient(135deg, #D42027 0%, #D42027 100%);
     border-radius: 2px;
 }
 
@@ -224,12 +239,13 @@ nav {
     font-size: 3rem;
     margin-bottom: 1rem;
     display: block;
+    color: #0D2A6C;
 }
 
 .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #1a1a1a;
+    color: #0D2A6C;
 }
 
 .service-card p {
@@ -369,7 +385,9 @@ nav {
 }
 
 .stars {
-    color: #ff6b35;
+        color: #fff;
+    }
+    background: #D42027;
     margin-bottom: 1rem;
     font-size: 1.1rem;
 }
@@ -419,7 +437,7 @@ nav {
 }
 
 .cta-button-secondary:hover {
-    background: #f0f0f0;
+    background: #0D2A6C;
 }
 
 /* Footer */
@@ -442,7 +460,7 @@ footer {
 }
 
 .footer-section h4 {
-    color: #ff6b35;
+    color: #0D2A6C;
     margin-bottom: 1rem;
 }
 
@@ -482,20 +500,20 @@ footer {
     justify-content: center;
     width: 45px;
     height: 45px;
-    background: rgba(255, 107, 53, 0.1);
-    border: 2px solid #ff6b35;
+    background: rgba(13, 42, 108, 0.1);
+    border: 2px solid #0D2A6C;
     border-radius: 50%;
-    color: #ff6b35;
+    color: #0D2A6C;
     text-decoration: none;
     font-size: 1.3rem;
     transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-    background: #ff6b35;
+    background: #0D2A6C;
     color: #fff;
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 10px 20px rgba(13, 42, 108, 0.3);
 }
 
 /* Animations */
