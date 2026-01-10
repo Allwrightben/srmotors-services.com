@@ -398,6 +398,72 @@ nav {
     color: #ccc;
 }
 
+/* Footer & Social icons */
+footer {
+    padding: 40px 2rem;
+    background: #0D2A6C;
+    color: #fff;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section h4 {
+    margin-bottom: 0.75rem;
+    color: #fff;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    color: #0D2A6C;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(13, 42, 108, 0.12);
+}
+
+.social-icon i {
+    font-size: 18px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: 20px;
+    color: rgba(255,255,255,0.9);
+    font-size: 0.95rem;
+}
+
 .testimonial-author {
     font-weight: 600;
     color: #fff;
@@ -410,7 +476,10 @@ nav {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    background-image: url(/images/toolsblue2.webp); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     padding: 80px 2rem;
     text-align: center;
     color: #fff;
