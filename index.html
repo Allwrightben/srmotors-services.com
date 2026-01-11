@@ -18,7 +18,7 @@
     <!-- Navigation -->
     <header>
         <nav>
-            <img src="images/logocropped.jpg" alt="SR Motors Logo" class="logo">
+            <img src="images/logo1.PNG" alt="SR Motors Logo" class="logo">
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -34,7 +34,7 @@
         <div class="hero-content">
             <h1>Reliable Repairs.<br>Honest Service.<br>All Makes & Models.</h1>
             <p>From diagnostics to restorations, SR Motors delivers quality workmanship you can trust - for cars and
-                light commercials</p>
+                light commercial vehicles.</p>
             <a href="tel:01462675210" class="cta-button">Call SR Motors</a>
         </div>
     </section>
@@ -49,68 +49,44 @@
     </section>
 
     <!-- Tools banner -->
-    <section class="tools-banner">
-        <img src="images/toolsred.webp" alt="Tools - SR Motors" class="tools-image">
-    </section>
+    <section class="tools-banner-red" data-src="images/toolsred.webp" aria-hidden="true"></section>
 
     <!-- Services Section -->
     <section class="services" id="services">
         <h2 class="section-title">Our Services</h2>
         <p class="services-tagline">From quick fixes to major repairs - we do it all properly.</p>
         <div class="services-grid">
-            <div class="service-card" style="background-image: url('images/services.webp'); background-size: cover; background-position: center;">
-                <span class="service-icon"></span>
-                <h3></h3>
+            <div class="service-card" style="background-image: url('images/servicing.PNG'); background-size: cover; background-position: center;">
             </div>
-            <div class="service-card" style="background-image: url('images/diagnostics-bg.jpg'); background-size: cover; background-position: center;">
-                <span class="service-icon">🖥️</span>
-                <h3>Computer Diagnostics</h3>
+            <div class="service-card" style="background-image: url('images/diagnostics.PNG'); background-size: cover; background-position: center;">
             </div>
-            <div class="service-card">
-                <span class="service-icon">📋</span>
-                <h3>MOT Repairs</h3>
+            <div class="service-card" style="background-image: url('images/mot.PNG'); background-size: cover; background-position: center;">
             </div>
-            <div class="service-card">
+            <div class="service-card" style="display: none; background-image: url('images/'); background-size: cover; background-position: center;">
                 <span class="service-icon">⏰</span>
                 <h3>Timing Belts & Timing Chains</h3>
             </div>
-            <div class="service-card">
-                <span class="service-icon">🚗</span>
-                <h3>Exhausts</h3>
+            <div class="service-card" style="background-image: url('images/exhaust.PNG'); background-size: cover; background-position: center;">
             </div>
-            <div class="service-card">
-                <span class="service-icon">🔋</span>
-                <h3>Batteries</h3>
+            <div class="service-card" style="background-image: url('images/battery.PNG'); background-size: cover; background-position: center;">
             </div>
-            <div class="service-card hidden">
-                <span class="service-icon">⚙️</span>
-                <h3>Clutches</h3>
+            <div class="service-card" style="background-image: url('images/clutch.PNG'); background-size: cover; background-position: center;">
             </div>
-            <div class="service-card hidden">
-                <span class="service-icon">❄️</span>
-                <h3>Air Conditioning</h3>
+            <div class="service-card" style="background-image: url('images/air.PNG'); background-size: cover; background-position: center;">
             </div>
-            <div class="service-card hidden">
-                <span class="service-icon">🛞</span>
-                <h3>Suspensions</h3>
+            <div class="service-card" style="background-image: url('images/suspention.PNG'); background-size: cover; background-position: center;">
             </div>
-            <div class="service-card hidden">
+            <div class="service-card" style="display: none; background-image: url('images/'); background-size: cover; background-position: center;">
                 <span class="service-icon">🔥</span>
                 <h3>Alloy Welding</h3>
             </div>
-            <div class="service-card hidden">
-                <span class="service-icon">🛠️</span>
-                <h3>Restorations</h3>
+            <div class="service-card" style="background-image: url('images/body.PNG'); background-size: cover; background-position: center;">
             </div>
         </div>
-        <div class="services-toggle">
-            <button id="toggle-services" class="cta-button">Show More Services</button>
-        </div>
+
     </section>
 
-    <section class="tools-banner">
-        <img src="images/oilcan.webp" alt="Tools - SR Motors" class="tools-image">
-    </section>
+    <section class="tools-banner data-src="images/toolbox.webp" aria-hidden="true"></section>
 
     <!-- Why Choose Us -->
     <section class="why-choose" id="why-us">
@@ -127,7 +103,7 @@
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <h2>Need a reliable local garage?</h2>
-        <p>Get in touch today - we're here to help with anything you vehicle needs.</p>
+        <p>Get in touch today - we're here to help with anything your vehicle needs.</p>
         
         <a href="tel:01462675210" class="cta-button">Call now</a>
     </section>
@@ -196,21 +172,54 @@
             observer.observe(el);
         });
 
-        // Services toggle functionality
-        const toggleButton = document.getElementById('toggle-services');
-        const hiddenServices = document.querySelectorAll('.service-card.hidden');
+        // Fixed banners: keep original image sizing and pin images to viewport on all devices
+        (function () {
+            const banners = document.querySelectorAll('.tools-banner[data-src]');
+            const maxWidth = 1200;
 
-        toggleButton.addEventListener('click', function () {
-            hiddenServices.forEach(card => {
-                card.classList.toggle('hidden');
-            });
+            function createFixedImageFor(banner) {
+                const src = banner.getAttribute('data-src');
+                if (!src) return null;
 
-            if (toggleButton.textContent === 'Show More Services') {
-                toggleButton.textContent = 'Show Less Services';
-            } else {
-                toggleButton.textContent = 'Show More Services';
+                // create img element pinned to viewport
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = '';
+                img.className = 'tools-fixed-img';
+
+                // append to body once ready
+                document.body.appendChild(img);
+
+                function update() {
+                    const rect = banner.getBoundingClientRect();
+                    const docTop = rect.top + window.scrollY;
+                    const width = Math.min(window.innerWidth, maxWidth);
+
+                    img.style.width = width + 'px';
+                    img.style.top = docTop + 'px';
+
+                    // after width applied, calculate rendered height and set banner height to match
+                    const renderedHeight = img.getBoundingClientRect().height;
+                    banner.style.height = renderedHeight + 'px';
+
+                    // ensure banner overlay sits above the fixed image
+                    banner.style.zIndex = 2;
+                }
+
+                // update on load and resize
+                img.addEventListener('load', update);
+                window.addEventListener('resize', update);
+                window.addEventListener('orientationchange', update);
+
+                // small timeout to handle late image decoding/layout
+                setTimeout(update, 100);
+
+                return img;
             }
-        });
+
+            banners.forEach(createFixedImageFor);
+        })();
+
     </script>
 </body>
 

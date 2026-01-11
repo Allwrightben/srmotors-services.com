@@ -179,29 +179,23 @@ nav {
 
 /* Tools banner between About and Services */
 .tools-banner {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background: none;
-    border-radius: 0;
-    box-shadow: none;
-    overflow: hidden;
+    background-image: url(/images/toolbox.webp); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 600px;
 }
 
-.tools-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 1200px; /* constrain box width */
-    margin: 0 auto; /* center the image box */
-    object-fit: cover;
-    border-radius: 0;
-}
-
-@media (max-width: 600px) {
-    .tools-banner { padding: 0; margin: 0; }
-    .tools-image { border-radius: 0; max-width: none; }
+.tools-banner-red{
+    background-image: url(/images/toolsred.webp); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 600px;
 }
 
 /* Services Section */
@@ -244,18 +238,44 @@ nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Show 3 cards per row on larger screens */
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+}
+
+/* Responsive breakpoints: 2 columns until ~600–900px, then 1 column on small phones */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .service-card {
     background: lightgrey;
-    padding: 2.5rem;
+    padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     border-top: 4px solid transparent;
+
+    /* Make cards square and keep background images covering */
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    min-height: 220px; /* fallback for older browsers */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
 .service-card:hover {
@@ -282,14 +302,7 @@ nav {
     line-height: 1.8;
 }
 
-.service-card.hidden {
-    display: none;
-}
 
-.services-toggle {
-    text-align: center;
-    margin-top: 2rem;
-}
 
 /* Why Choose Us Section */
 .why-choose {
@@ -414,8 +427,7 @@ nav {
 }
 
 .stars {
-        color: #fff;
-    }
+    color: #fff;
     background: #D42027;
     margin-bottom: 1rem;
     font-size: 1.1rem;
@@ -527,11 +539,6 @@ footer {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.cta-button-secondary {
-    background: #fff;
-    color: #ff6b35;
 }
 
 .cta-button-secondary:hover {
@@ -682,7 +689,6 @@ footer {
         gap: 1rem;
     }
 
-    .services-grid,
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
