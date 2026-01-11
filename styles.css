@@ -185,7 +185,7 @@ nav {
     background-attachment: fixed;
     max-width: 1200px;
     margin: 0 auto;
-    height: 600px;
+    height: 500px;
 }
 
 .tools-banner-red{
@@ -195,7 +195,7 @@ nav {
     background-attachment: fixed;
     max-width: 1200px;
     margin: 0 auto;
-    height: 600px;
+    height: 500px;
 }
 
 /* Services Section */
@@ -456,11 +456,6 @@ footer {
     flex-wrap: wrap;
 }
 
-.footer-section h4 {
-    margin-bottom: 0.75rem;
-    color: #fff;
-}
-
 .footer-section a {
     color: #fff;
     text-decoration: none;
@@ -565,7 +560,7 @@ footer {
 }
 
 .footer-section h4 {
-    color: #0D2A6C;
+    color: #D42027;
     margin-bottom: 1rem;
 }
 
@@ -619,6 +614,32 @@ footer {
     color: #fff;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(13, 42, 108, 0.3);
+}
+
+/* Brand-specific social icon styling */
+.social-icon[aria-label="WhatsApp"] {
+    background: #25D366; /* WhatsApp green */
+    border-color: #25D366;
+    color: #fff;
+}
+.social-icon[aria-label="WhatsApp"]:hover {
+    background: #20b855; /* slightly darker on hover */
+    border-color: #20b855;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.22);
+    transform: translateY(-6px) scale(1.03);
+}
+
+.social-icon[aria-label="Instagram"] {
+    background: linear-gradient(45deg, #f58529 0%, #dd2a7b 50%, #8134af 100%);
+    border: none;
+    color: #fff;
+}
+.social-icon[aria-label="Instagram"] i {
+    filter: drop-shadow(0 1px 0 rgba(0,0,0,0.15));
+}
+.social-icon[aria-label="Instagram"]:hover {
+    box-shadow: 0 10px 30px rgba(136, 17, 153, 0.18);
+    transform: translateY(-6px) scale(1.03);
 }
 
 /* Animations */
