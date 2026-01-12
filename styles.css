@@ -179,7 +179,7 @@ nav {
 
 /* Tools banner between About and Services */
 .tools-banner {
-    background-image: url(/images/toolbox.webp); 
+    background-image: url(/images/toolbox.jpg); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -189,7 +189,7 @@ nav {
 }
 
 .tools-banner-red{
-    background-image: url(/images/toolsred.webp); 
+    background-image: url(/images/toolsred.jpg); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -512,7 +512,7 @@ footer {
 
 /* CTA Section */
 .cta-section {
-    background-image: url(/images/toolsblue2.webp); 
+    background-image: url(/images/toolsblue2.jpg); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
