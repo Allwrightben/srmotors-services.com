@@ -222,7 +222,7 @@
 
         // Fixed banners: keep original image sizing and pin images to viewport on all devices
         (function () {
-            const banners = document.querySelectorAll('.tools-banner[data-src]');
+            const banners = document.querySelectorAll('[data-src]');
             const maxWidth = 1200;
 
             function createFixedImageFor(banner) {
@@ -248,7 +248,7 @@
 
                     // after width applied, calculate rendered height and set banner height to match
                     const renderedHeight = img.getBoundingClientRect().height;
-                    banner.style.height = renderedHeight + 'px';
+                    banner.style.height = '500px';
 
                     // ensure banner overlay sits above the fixed image
                     banner.style.zIndex = 2;
