@@ -198,6 +198,13 @@ nav {
     height: 500px;
 }
 
+/* Mobile fix for background-attachment */
+@media (max-width: 768px) {
+    .tools-banner, .tools-banner-red {
+        background-attachment: scroll;
+    }
+}
+
 /* Services Section */
 .services {
     padding: 100px 2rem;
