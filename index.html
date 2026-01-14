@@ -222,50 +222,7 @@
 
         // Fixed banners: keep original image sizing and pin images to viewport on all devices
         (function () {
-            const banners = document.querySelectorAll('[data-src]');
-            const maxWidth = 1200;
-
-            function createFixedImageFor(banner) {
-                const src = banner.getAttribute('data-src');
-                if (!src) return null;
-
-                // create img element pinned to viewport
-                const img = document.createElement('img');
-                img.src = src;
-                img.alt = '';
-                img.className = 'tools-fixed-img';
-
-                // append to body once ready
-                document.body.appendChild(img);
-
-                function update() {
-                    const rect = banner.getBoundingClientRect();
-                    const docTop = rect.top + window.scrollY;
-                    const width = Math.min(window.innerWidth, maxWidth);
-
-                    img.style.width = width + 'px';
-                    img.style.top = docTop + 'px';
-
-                    // after width applied, calculate rendered height and set banner height to match
-                    const renderedHeight = img.getBoundingClientRect().height;
-                    banner.style.height = '500px';
-
-                    // ensure banner overlay sits above the fixed image
-                    banner.style.zIndex = 2;
-                }
-
-                // update on load and resize
-                img.addEventListener('load', update);
-                window.addEventListener('resize', update);
-                window.addEventListener('orientationchange', update);
-
-                // small timeout to handle late image decoding/layout
-                setTimeout(update, 100);
-
-                return img;
-            }
-
-            banners.forEach(createFixedImageFor);
+            // Removed JS for fixed banners; using CSS background-attachment instead
         })();
 
     </script>
